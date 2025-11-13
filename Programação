@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Programação - Núcleos Profissionais</title>
+    <style>
+        /* Estilos gerais do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Fonte legível e profissional */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fundo cinza claro para contraste */
+            color: #333; /* Texto escuro para boa legibilidade */
+        }
+        
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #007bff; /* Azul profissional */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Estilos da navegação */
+        nav {
+            background-color: #333; /* Fundo escuro para destaque */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none; /* Remove sublinhado padrão */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+        
+        /* Estilos do dropdown (menu expansível) */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none; /* Escondido por padrão */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Estilos das seções principais (containers) */
+        .container {
+            max-width: 1200px; /* Largura máxima para responsividade */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white; /* Fundo branco para conteúdo */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil para profundidade */
+        }
+        
+        /* Estilos dos posts individuais */
+        .post {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd; /* Linha separadora entre posts */
+        }
+        .post h2 {
+            color: #007bff; /* Azul para títulos de posts */
+        }
+        
+        /* Estilos da seção de contato */
+        .contact {
+            background-color: #e9ecef; /* Fundo cinza claro */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        /* Estilos do rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site: título e descrição explicativa -->
+    <header>
+        <h1>Blog de Programação</h1>
+        <p>Explorando núcleos profissionais em desenvolvimento de software, com tutoriais detalhados, exemplos práticos e dicas para programadores iniciantes e avançados.</p>
+    </header>
+    
+    <!-- Navegação: links para seções da página, com menu dropdown para categorias -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#posts">Posts</a>
+        <a href="#contact">Contato</a>
+        <!-- Menu dropdown para categorias (controlado por JS) -->
+        <div class="dropdown">
+            <button class="dropbtn">Categorias</button>
+            <div class="dropdown-content">
+                <a href="#algoritmos">Algoritmos</a>
+                <a href="#web">Desenvolvimento Web</a>
+                <a href="#dados">Estruturas de Dados</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Seção Home: introdução ao blog com explicações sobre núcleos profissionais -->
+    <div class="container" id="home">
+        <h2>Bem-vindo ao Blog de Programação</h2>
+        <p>Este blog é dedicado a profissionais e estudantes de programação. Aqui, exploramos os "núcleos profissionais" essenciais: algoritmos (para resolver problemas de forma eficiente), estruturas de dados (para organizar e manipular informações) e desenvolvimento web (para criar aplicações interativas e acessíveis). Cada tópico inclui explicações passo a passo, exemplos em código e aplicações reais, ajudando você a avançar na carreira.</p>
+    </div>
+    
+    <!-- Seção Sobre: mais detalhes sobre o blog e seus objetivos -->
+    <div class="container" id="about">
+        <h2>Sobre Nós</h2>
+        <p>Nosso foco é educar sobre os fundamentos da programação. "Núcleos profissionais" referem-se aos pilares centrais que todo programador deve dominar: algoritmos otimizados para performance, estruturas de dados como listas e árvores para eficiência, e tecnologias web como React para interfaces modernas. Este site é uma ferramenta gratuita para aprendizado, com conteúdo atualizado e comunidade aberta.</p>
+    </div>
+    
+    <!-- Seção Posts: artigos detalhados com explicações expandidas -->
+    <div class="container" id="posts">
+        <h2>Posts Recentes</h2>
+        <div class="post" id="algoritmos">
+            <h2>Introdução aos Algoritmos de Ordenação</h2>
+            <p>Publicado em 13 de novembro de 2025</p>
+            <p>Algoritmos de ordenação são um núcleo profissional fundamental, usados para organizar dados em listas ou bancos. Neste post, explicamos três tipos principais: Bubble Sort (simples, mas lento para grandes volumes), Quick Sort (rápido e recursivo) e Merge Sort (estável e eficiente para merges). Exemplos em Python: para ordenar [3,1,4,1,5], use sorted() ou implemente manualmente. Dica profissional: escolha baseado no tamanho dos dados para otimizar tempo de execução.</p>
+            <a href="#" class="read-more">Leia mais</a>
+        </div>
+        <div class="post" id="web">
+            <h2>Desenvolvimento Web com React</h2>
+            <p>Publicado em 13 de novembro de 2025</p>
+            <p>React é um núcleo essencial para desenvolvimento web profissional, permitindo criar UIs dinâmicas. Aprenda componentes (blocos reutilizáveis), estado (dados que mudam) e props (parâmetros). Exemplo: crie um contador com useState. Comparado a Vue.js, React é mais flexível. Ideal para apps escaláveis; comece instalando via npm e explorando hooks para interatividade.</p>
+            <a href="#" class="read-more">Leia mais</a>
+        </div>
+        <div class="post" id="dados">
+            <h2>Estruturas de Dados Essenciais</h2>
+            <p>Publicado em 13 de novembro de 2025</p>
+            <p>Estruturas de dados são o núcleo da programação eficiente, organizando informações para acesso rápido. Cubrimos listas (sequenciais), pilhas (LIFO) e árvores (hierárquicas). Em JavaScript, use arrays para listas; em Python, dicts para mapas. Aplicações: bancos de dados e algoritmos de busca. Dica: use Big O para medir complexidade e escolher a estrutura certa em projetos reais.</p>
+            <a href="#" class="read-more">Leia mais</a>
+        </div>
+        <!-- Adicione mais posts aqui se quiser -->
+    </div>
+    
+    <!-- Seção Contato: detalhes para contato -->
+    <div class="container" id="contact">
+        <h2>Contato</h2>
+        <div class="contact">
+            <p><strong>Telefone:</strong> 11 97179 6145</p>
+            <p><strong>Email:</strong> <a href="mailto:lucas.d.santos54@aluno.senai.br">lucas.d.santos54@aluno.senai.br</a></p>
+            <p>Entre em contato para sugestões de posts, dúvidas sobre núcleos profissionais ou colaborações. Estamos aqui para ajudar a comunidade de programadores crescer!</p>
+        </div>
+    </div>
+    
+    <!-- Rodapé: direitos autorais -->
+    <footer>
+        <p>&copy; 2025 Blog de Programação. Todos os direitos reservados. Criado para educar e inspirar programadores em núcleos essenciais.</p>
+    </footer>
+    
+    <script>
+        // JavaScript inline para interatividade
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para o menu dropdown: mostra/esconde as opções ao clicar
+            const dropdown = document.querySelector('.dropdown');
+            const dropbtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            
+            dropbtn.addEventListener('click', function() {
+                // Alterna a visibilidade do menu
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // Fecha o dropdown se clicar fora dele
+            window.addEventListener('click', function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+            
+            // Função para os links "Leia mais": mostra um alerta explicativo
+            const readMoreLinks = document.querySelectorAll('.read-more');
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Impede o link de redirecionar
+                    alert('Este é um exemplo interativo! Em um site real, isso levaria a uma página completa com código, imagens e mais detalhes sobre o tópico de programação.'); // Alerta explicativo
+                });
+            });
+            
+            // Log no console para confirmar carregamento (pressione F12 para ver)
+            console.log('Site carregado com sucesso! Explore os núcleos profissionais em programação.');
+        });
+    </script>
+</body>
+</html>
